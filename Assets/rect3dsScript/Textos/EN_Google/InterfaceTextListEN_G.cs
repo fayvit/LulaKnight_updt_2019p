@@ -187,7 +187,7 @@ Thanks for playing"
         },
         {
             InterfaceTextKey.avancar,
-            "Advance"
+            "Go"
         },
         {
             InterfaceTextKey.valor,

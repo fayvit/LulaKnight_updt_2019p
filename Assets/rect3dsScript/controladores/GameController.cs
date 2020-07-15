@@ -72,7 +72,7 @@ public class GameController : MonoBehaviour
         EventAgregator.AddListener(EventKey.emblemUnequip, OnUnequipEmblem);
         EventAgregator.AddListener(EventKey.requestLocalnameExibition, OnRequestNameexibition);
         EventAgregator.AddListener(EventKey.changeActiveScene, OnChangeActiveScene);
-        EventAgregator.AddListener(EventKey.changeMapLimits, OnChangeMapLimits);
+        //EventAgregator.AddListener(EventKey.changeMapLimits, OnChangeMapLimits);
         EventAgregator.AddListener(EventKey.requestMapClearPixels, OnRequestMapClearPixels);
         EventAgregator.AddListener(EventKey.abriuPainelSuspenso, OnOpenExternalPanel);
         EventAgregator.AddListener(EventKey.fechouPainelSuspenso, OnCloseExternalPanel);
@@ -100,7 +100,7 @@ public class GameController : MonoBehaviour
         EventAgregator.RemoveListener(EventKey.emblemUnequip, OnUnequipEmblem);
         EventAgregator.RemoveListener(EventKey.requestLocalnameExibition, OnRequestNameexibition);
         EventAgregator.RemoveListener(EventKey.changeActiveScene, OnChangeActiveScene);
-        EventAgregator.RemoveListener(EventKey.changeMapLimits, OnChangeMapLimits);
+        //EventAgregator.RemoveListener(EventKey.changeMapLimits, OnChangeMapLimits);
         EventAgregator.RemoveListener(EventKey.requestMapClearPixels, OnRequestMapClearPixels);
         EventAgregator.RemoveListener(EventKey.abriuPainelSuspenso, OnOpenExternalPanel);
         EventAgregator.RemoveListener(EventKey.fechouPainelSuspenso, OnCloseExternalPanel);
@@ -130,11 +130,12 @@ public class GameController : MonoBehaviour
         });
     }
 
+    /*
     private void OnChangeMapLimits(IGameEvent e)
     {
         StandardSendGameEvent ssge = e as StandardSendGameEvent;
         mykeys.LimitanteDoMapaAtual = (LimitantesDeMapa)ssge.MyObject[0];
-    }
+    }*/
 
     private void OnChangeActiveScene(IGameEvent e)
     {
@@ -331,7 +332,7 @@ public class GameController : MonoBehaviour
                 new MyInvokeMethod().InvokeAoFimDoQuadro(() =>
                 {
                     //mapConstruct.GetMapDates = MyKeys.MapDates;
-                    UpdateMap.Limit = MyKeys.LimitanteDoMapaAtual;
+                    UpdateMap.Limit = SaveMapLimits.Load(); ;// MyKeys.LimitanteDoMapaAtual;
                     OnChangeActiveScene(null);
                 });
             });

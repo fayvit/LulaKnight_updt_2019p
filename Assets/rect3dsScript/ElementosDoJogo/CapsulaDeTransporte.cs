@@ -28,6 +28,7 @@ public class CapsulaDeTransporte : AtivadorDeBotao
         menu.IniciarHud(EscolhaDeViagem, myKeys.ListaDeCapsulas.GetActiveCapsuleNames());
         SaveDatesManager.SalvarAtualizandoDados();
         EventAgregator.Publish(EventKey.abriuPainelSuspenso, null);
+        EventAgregator.Publish(EventKey.requestHideControllers, null);
     }
 
     void FakeFadeOut()
@@ -108,5 +109,6 @@ public class CapsulaDeTransporte : AtivadorDeBotao
         menu.FinalizarHud();
         menuContainer.SetActive(false);
         EventAgregator.Publish(EventKey.fechouPainelSuspenso);
+        EventAgregator.Publish(EventKey.requestShowControllers);
     }
 }

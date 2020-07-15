@@ -68,6 +68,7 @@ public class HexagonoColetavelBase
     {
         
         EventAgregator.Publish(EventKey.restartMusic);
+        EventAgregator.Publish(EventKey.requestShowControllers);
         EventAgregator.Publish(new StandardSendGameEvent(EventKey.disparaSom, SoundEffectID.Book1));
         
 

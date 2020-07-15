@@ -224,6 +224,7 @@
     <Compile Include="Assets\rect3dsScript\MapConstruct\LimitantesDeMapa.cs" />
     <Compile Include="Assets\rect3dsScript\MapConstruct\MapInfos.cs" />
     <Compile Include="Assets\rect3dsScript\MapConstruct\PreMapa.cs" />
+    <Compile Include="Assets\rect3dsScript\MapConstruct\SaveMapLimits.cs" />
     <Compile Include="Assets\rect3dsScript\MapConstruct\TexturaDeMapaAtual.cs" />
     <Compile Include="Assets\rect3dsScript\MapConstruct\UpdateMap.cs" />
     <Compile Include="Assets\rect3dsScript\Paralax.cs" />

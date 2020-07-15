@@ -162,7 +162,7 @@ public enum EventKey
     finishAllTabPauseMenu,
     sendAnimationKey,
     enemyActionRequest,
-    changeMapLimits,
+    //changeMapLimits,
     boolDescendoPulo,
     requestMapClearPixels
 }

@@ -10,7 +10,7 @@ public class KeyVar
     private Dictionary<KeyShift, bool> shift = new Dictionary<KeyShift, bool>();
     private Dictionary<string, bool> autoShift = new Dictionary<string, bool>();
     private Dictionary<string, bool> enemyShift = new Dictionary<string, bool>();
-    public MapConstructor.LimitantesDeMapa LimitanteDoMapaAtual { get; set; }
+ //   public MapConstructor.LimitantesDeMapa LimitanteDoMapaAtual { get; set; }
     /*private Dictionary<MyVector2Int, MyColor> mapDates = new Dictionary<MyVector2Int, MyColor>();
 
     public Dictionary<MyVector2Int, MyColor> MapDates

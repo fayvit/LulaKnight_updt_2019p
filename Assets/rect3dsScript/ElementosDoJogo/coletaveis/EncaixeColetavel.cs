@@ -16,6 +16,7 @@ public class EncaixeColetavel : ColetavelBase
     protected override void OnClosePanel()
     {
         EventAgregator.Publish(new StandardSendGameEvent(EventKey.disparaSom, SoundEffectID.Book1));
+        EventAgregator.Publish(new StandardSendGameEvent(EventKey.requestShowControllers));
         base.OnClosePanel();
     }
 }

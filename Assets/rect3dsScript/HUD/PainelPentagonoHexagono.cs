@@ -21,6 +21,9 @@ public class PainelPentagonoHexagono : PainelUmaMensagem
     public void ConstroiPainelDosPentagonosOuHexagonos(System.Action r,EstiloColetavel f)
     {
         string[] s = BancoDeTextos.RetornaListaDeTextoDoIdioma(ChaveDeTexto.frasesDeColetaveis).ToArray();
+
+        EventAgregator.Publish(new StandardSendGameEvent(EventKey.requestHideControllers));
+
         if (f == EstiloColetavel.militanteDeCoragem)
         {
             ConstroiPainelUmaMensagem(r, s[0]);

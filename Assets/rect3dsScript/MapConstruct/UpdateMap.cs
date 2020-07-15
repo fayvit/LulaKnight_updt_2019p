@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace MapConstructor
 {
+
     public class UpdateMap
     {
         private static LimitantesDeMapa limit;
@@ -11,7 +12,8 @@ namespace MapConstructor
         {
             get { return limit; }
             set {
-                EventAgregator.Publish(new StandardSendGameEvent(EventKey.changeMapLimits, value));
+                //EventAgregator.Publish(new StandardSendGameEvent(EventKey.changeMapLimits, value));
+                SaveMapLimits.Save(value);
                 limit = value; 
             }
         }
@@ -19,6 +21,7 @@ namespace MapConstructor
             
 
         public static string FileName { get { return "testeMap" + SaveDatesManager.s.IndiceDoJogoAtualSelecionado; } }
+
         public static void CriarPngMap(Dictionary<MyVector2Int,MyColor> d)
         {
             LimitantesDeMapa L = CalculaLimitanteMap.Calcula(d);
